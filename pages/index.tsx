@@ -30,10 +30,11 @@ const getRandomVerb = (data: Data) => {
 };
 
 export async function getStaticProps() {
+  const [initialOccurrenceNoun, initialOccurrenceVerb] = getRandomOccurrence(data, false);
   return {
     props: {
-      initialOccurrenceNoun: getRandomOccurrence(data, false)[0],
-      initialOccurrenceVerb: getRandomOccurrence(data, false)[1],
+      initialOccurrenceNoun,
+      initialOccurrenceVerb,
       initialNoun: getRandomNoun(data),
       initialVerb: getRandomVerb(data),
     },
@@ -108,15 +109,21 @@ export default function Home({
       <main className={styles.main}>
         <h1 className={styles.title}>
           Game Mechanics Generator <small></small>
+          <div className={styles.footer}>
+            <a
+              href="https://www.youtube.com/channel/UCPxokqPdoBn5Ivb0C57S4MA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              by kevin oh{" "}
+            </a>
+          </div>
         </h1>
-
-        <div style={{ marginBottom: "50px" }} />
 
         <button className={styles.button} onClick={() => getNewPermutation()}>
           Generate
         </button>
 
-        <div style={{ marginBottom: "50px" }} />
         <div className={styles.gridContainer}>
           <div className={styles.grid}>
             <div className={styles.card}>
@@ -154,16 +161,6 @@ export default function Home({
           </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://www.youtube.com/channel/UCPxokqPdoBn5Ivb0C57S4MA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          by kevin oh{" "}
-        </a>
-      </footer>
     </div>
   );
 }
