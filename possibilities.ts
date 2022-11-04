@@ -36,6 +36,17 @@ const verbs = [
   "heals",
   "burns ",
   "echoes",
+  "becomes bouncy",
+  "becomes sticky",
+  "gets blocked",
+  "reflects light",
+  "ignites",
+  "freezes",
+  "becomes unmoveable",
+  "defies gravity",
+  "changes color",
+  "blocks the player",
+  "shrinks the player",
 ];
 
 export type Data = { occurrences: Occurrence; nouns: string[]; verbs: string[] };
