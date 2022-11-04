@@ -79,8 +79,6 @@ export default function Home({
   };
 
   const toggleLock = (key: string) => {
-    console.log("hit");
-
     const newLocked: any = { ...locked };
 
     if (Object.keys(locked).includes(key)) {
@@ -115,7 +113,6 @@ export default function Home({
         <div style={{ marginBottom: "100px" }} />
 
         <div className={styles.grid}>
-          {JSON.stringify(locked, null, 2)}
           <div className={styles.card}>
             <h2 className={styles.text}>As the</h2>
           </div>

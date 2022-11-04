@@ -120,6 +120,7 @@
 .text,
 .textoption {
   font-size: 2rem;
+  text-align: center;
 }
 
 .text {
