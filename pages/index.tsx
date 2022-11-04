@@ -110,48 +110,49 @@ export default function Home({
           Game Mechanics Generator <small></small>
         </h1>
 
-        <div style={{ marginBottom: "100px" }} />
-
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h2 className={styles.text}>As the</h2>
-          </div>
-          <div className={styles.card}>
-            <TextOption
-              text={randomOccurrenceNoun}
-              clickFn={() => toggleLock("occurrenceNoun")}
-              locked={isLocked(locked, "occurrenceNoun")}
-            />
-            <TextOption
-              text={randomOccurrenceVerb}
-              clickFn={() => toggleLock("occurrenceVerb")}
-              locked={isLocked(locked, "occurrenceVerb")}
-            />
-            <h2 className={styles.text}>,</h2>
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <TextOption
-              text={randomNoun}
-              clickFn={() => toggleLock("noun")}
-              locked={isLocked(locked, "noun")}
-            />
-            <TextOption
-              text={randomVerb}
-              clickFn={() => toggleLock("verb")}
-              locked={isLocked(locked, "verb")}
-            />
-            <h2 className={styles.text}>.</h2>
-          </div>
-        </div>
-
-        <div style={{ marginBottom: "40px" }} />
+        <div style={{ marginBottom: "50px" }} />
 
         <button className={styles.button} onClick={() => getNewPermutation()}>
-          Throw the dice!
+          Generate
         </button>
+
+        <div style={{ marginBottom: "50px" }} />
+        <div className={styles.gridContainer}>
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <h2 className={styles.text}>As the</h2>
+            </div>
+            <div className={styles.card}>
+              <TextOption
+                text={randomOccurrenceNoun}
+                clickFn={() => toggleLock("occurrenceNoun")}
+                locked={isLocked(locked, "occurrenceNoun")}
+              />
+              <TextOption
+                text={randomOccurrenceVerb}
+                clickFn={() => toggleLock("occurrenceVerb")}
+                locked={isLocked(locked, "occurrenceVerb")}
+              />
+              <h2 className={styles.text}>,</h2>
+            </div>
+          </div>
+
+          <div className={styles.grid}>
+            <div className={styles.card}>
+              <TextOption
+                text={randomNoun}
+                clickFn={() => toggleLock("noun")}
+                locked={isLocked(locked, "noun")}
+              />
+              <TextOption
+                text={randomVerb}
+                clickFn={() => toggleLock("verb")}
+                locked={isLocked(locked, "verb")}
+              />
+              <h2 className={styles.text}>.</h2>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -160,11 +161,7 @@ export default function Home({
           target="_blank"
           rel="noopener noreferrer"
         >
-          by{" "}
-          <span className={styles.logo}>
-            kevin oh
-            {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
-          </span>
+          by kevin oh{" "}
         </a>
       </footer>
     </div>
