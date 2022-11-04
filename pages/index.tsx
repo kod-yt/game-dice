@@ -119,6 +119,7 @@ export default function Home({
             </a>
           </div>
         </h1>
+       <div className={styles.spacer} style={{ marginBottom: "32px" }} /> 
 
         <button className={styles.button} onClick={() => getNewPermutation()}>
           Generate
