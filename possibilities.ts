@@ -49,7 +49,7 @@ const verbs = [
   "shrinks the player",
 ];
 
-export type Data = { occurrences: Occurrence; nouns: string[]; verbs: string[] };
+export type Data = { occurrences: Occurrence; nouns: string[]; verbs: string[]; [k: string]: any };
 
 const data: Data = {
   occurrences: {},

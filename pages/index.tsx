@@ -65,7 +65,7 @@ export default function Home({
       toLock.includes("occurrenceNoun"),
       randomOccurrenceNoun
     );
-    const keyToUpdateFn = {
+    const keyToUpdateFn: any = {
       occurrenceNoun: () => setRandomOccurrenceNoun(occurrenceNoun),
       occurrenceVerb: () => setRandomOccurrenceVerb(occurrenceVerb),
       noun: () => setRandomNoun(getRandomNoun(data)),
@@ -81,7 +81,7 @@ export default function Home({
   const toggleLock = (key: string) => {
     console.log("hit");
 
-    const newLocked = { ...locked };
+    const newLocked: any = { ...locked };
 
     if (Object.keys(locked).includes(key)) {
       // unlock
