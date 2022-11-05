@@ -16,7 +16,7 @@ const TextOption: React.FC<Props> = ({ text, locked, clickFn = () => {} }: Props
           <FiLock />
         </div>
       )}
-      <h2 className={styles.textoption}>{text}</h2>
+      <h3 className={styles.textoption}>{text}</h3>
     </div>
   );
 };

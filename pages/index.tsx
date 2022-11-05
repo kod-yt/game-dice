@@ -119,16 +119,17 @@ export default function Home({
             </a>
           </div>
         </h1>
-       <div className={styles.spacer} style={{ marginBottom: "32px" }} /> 
+        <div className={styles.spacer} style={{ marginBottom: "32px" }} />
 
         <button className={styles.button} onClick={() => getNewPermutation()}>
           Generate
         </button>
 
+        <h2>Click to lock an option.</h2>
         <div className={styles.gridContainer}>
           <div className={styles.grid}>
             <div className={styles.card}>
-              <h2 className={styles.text}>As the</h2>
+              <h3 className={styles.text}>As the</h3>
             </div>
             <div className={styles.card}>
               <TextOption
@@ -141,7 +142,7 @@ export default function Home({
                 clickFn={() => toggleLock("occurrenceVerb")}
                 locked={isLocked(locked, "occurrenceVerb")}
               />
-              <h2 className={styles.text}>,</h2>
+              <h3 className={styles.text}>,</h3>
             </div>
           </div>
 
@@ -157,7 +158,7 @@ export default function Home({
                 clickFn={() => toggleLock("verb")}
                 locked={isLocked(locked, "verb")}
               />
-              <h2 className={styles.text}>.</h2>
+              <h3 className={styles.text}>.</h3>
             </div>
           </div>
         </div>
